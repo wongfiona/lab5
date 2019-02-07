@@ -5,16 +5,19 @@ $(document).ready(function() {
 	initializePage();
 })
 
-$(.friends).click(function(anagrammedName)) {
-	
-}
-
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$("#name").click(listenerFunction);
 }
+
+function listenerFunction(name) {
+	name.preventDefault();
+	$(this).text(anagrammedName);
+}
+
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
